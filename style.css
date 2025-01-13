@@ -1,0 +1,86 @@
+/* Style for the gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+/* Adjust the size of the cat image */
+.photo img[src*="bacon3.jpg"] {
+    width: 80%; /* Adjust the width to 80% */
+    height: auto;
+}
+
+/* Style for the text overlay on images */
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Style for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-text {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
